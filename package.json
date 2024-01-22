@@ -1,0 +1,18 @@
+{
+  "name": "house-hunter-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Naim Ahmad",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.0"
+  }
+}
