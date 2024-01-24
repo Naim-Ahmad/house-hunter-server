@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
     }
 
     const token = jwt.sign({ email }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "100h",
     });
 
     res
@@ -104,14 +104,14 @@ router.post("/register", async (req, res) => {
     newUser = await newUser.save();
 
     const token = jwt.sign({ email }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "100h",
     });
 
     res
       .cookie("token", token, {
         httpOnly: true,
         secure: false,
-        sameSite: "none",
+        // sameSite: "none",
       })
       .send(newUser);
   } catch (error) {
